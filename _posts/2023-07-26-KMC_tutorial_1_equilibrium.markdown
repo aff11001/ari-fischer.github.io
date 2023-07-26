@@ -273,10 +273,10 @@ trajectory.
 
 *Exercises:*
 
-1.  How do changes to the rate constants affect the equilibrium ratio
+1.  How do changes to the rate constants affect the equilibrium ratio?
 
 2.  How do changes to the rate constants affect the time it takes to
-    reach a stable *A-B* ratio
+    reach a stable *A-B* ratio?
 
 3.  How can the code be modified to obtain steady-state reaction rates
     for A conversion to B at a fixed A mole fraction (*y<sub>A</sub>*)?
