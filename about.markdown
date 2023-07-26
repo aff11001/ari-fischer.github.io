@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![My image Name](/assets/images/profile_photo.jpg)
+![My image Name]({{site.baseurl}}/assets/images/profile_photo.jpg)
 
 I earned my PhD in Chemical Engineering at the University of California, Berkeley (2021). My doctoral studies focused on the fundamental mechanisms behind metal-catalyzed hydrogenation reactions and the synergies between metals and metal oxides. 
 
