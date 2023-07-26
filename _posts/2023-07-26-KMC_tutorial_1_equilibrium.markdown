@@ -31,6 +31,8 @@ reaction that follows these steps.
 species *A* to *B* on a catalytic site (denoted by \*). The *k<sub>i</sub>* terms
 represent forward and reverse rate constants for each reaction step.
 
+![](ari-fischer.github.io/site/assets/images/profile_photo.jpg)
+
 ![Scheme 1](KMC_tutorial_1/Scheme1.png)
 
 **Scheme 2**: A sequence of elementary steps for acid-catalyzed
