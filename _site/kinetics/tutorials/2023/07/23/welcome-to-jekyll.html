@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python | Ari Fischer</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction:" />
+<meta property="og:description" content="Introduction:" />
+<link rel="canonical" href="http://localhost:4000/kinetics/tutorials/2023/07/23/welcome-to-jekyll.html" />
+<meta property="og:url" content="http://localhost:4000/kinetics/tutorials/2023/07/23/welcome-to-jekyll.html" />
+<meta property="og:site_name" content="Ari Fischer" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-07-23T20:37:06+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-07-23T20:37:06+08:00","datePublished":"2023-07-23T20:37:06+08:00","description":"Introduction:","headline":"Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/kinetics/tutorials/2023/07/23/welcome-to-jekyll.html"},"url":"http://localhost:4000/kinetics/tutorials/2023/07/23/welcome-to-jekyll.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ari Fischer" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ari Fischer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-07-23T20:37:06+08:00" itemprop="datePublished">Jul 23, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><em>Introduction:</em></p>
+
+<p>Kinetic Monte Carlo (kMC) is a powerful tool for studying reaction
+kinetics when the set of important steps becomes too complicated for
+exact analysis of deterministic rate equations. kMC is used to generate
+stochastic trajectories through the space of possible metastable states
+that the system can adopt. Important information about reaction dynamics
+can be extracted from these trajectories, such as reaction rates and
+rate constants. In what follows, a kMC code is developed and applied to
+obtain thermodynamic information from the dynamics of a simple catalytic
+reaction. The results are then compared with those obtained from
+conventional kinetic analysis of deterministic rate equations.</p>
+
+<p><em>Tutorial:</em></p>
+
+<p>A simple catalytic reaction network for the conversion of species <em>A</em> to
+<em>B</em> is depicted in Scheme 1. It consists of <em>A</em> adsorption at a
+catalytic site (denoted by *) to form <em>A*</em> (step 1), <em>A*</em> conversion
+to <em>B*</em> (step 2), and <em>B*</em> desorption to form <em>B.</em> Acid-catalyzed
+1-propene isomerization to 2-propene (Scheme 2) is one example of a
+reaction that follows these steps.</p>
+
+<p><strong>Scheme 1</strong>: A sequence of elementary steps for the conversion of
+species <em>A</em> to <em>B</em> on a catalytic site (denoted by *). The <em>k<sub>i</sub></em> terms
+represent forward and reverse rate constants for each reaction step.</p>
+
+<p><img src="/assets/images/KMC_tutorial_1/Scheme1.png" alt="Scheme 1" /></p>
+
+<p><strong>Scheme 2</strong>: A sequence of elementary steps for acid-catalyzed
+1-propene isomerization to 2-propene.</p>
+
+<p><img src="/assets/images/KMC_tutorial_1/Scheme2.png" alt="Scheme 2" /></p>
+
+<p>Scheme 1 considers a catalytic site (*) that can be either (i) empty,
+(ii) <em>A</em>-covered, or (iii) <em>B</em>-covered. Each state can transition into
+others with frequencies represented by the rate constant for the
+elementary reactions (Scheme 1). Table 1 shows the set of possible
+initial states and the final states that are formed after a transition
+along with the frequencies of these transitions.</p>
+
+<p><img src="/assets/images/KMC_tutorial_1/Table1.png" alt="Table 1" /></p>
+
+<p>The procedure required to execute a transition from a given initial
+state is shown next as an illustrative example. The reader is referred
+to publications by Peters [1] and Andersen et al. [2] for more
+details regarding the algorithm and its implementation. The procedure
+for transition from an initial state, <em>i</em>, is outlined in the following:</p>
+
+<ol>
+  <li>
+    <p>Identify all possible transitions from initial <em>i</em> state and their
+corresponding frequencies.</p>
+  </li>
+  <li>
+    <p>Compute the net rate of transition from state <em>i</em> (denoted by
+<em>k<sub>i,tot</sub></em>) from the sum over the frequencies of each possible
+transition to the new state <em>j</em> (<em>k<sub>i,tot</sub></em> = ∑<sub>j</sub> <em>k<sub>i,j</sub></em>).</p>
+  </li>
+  <li>
+    <p>Select a random number (<em>u<sub>1</sub></em>) between 0 and 1.</p>
+  </li>
+  <li>
+    <p>Find the value of <em>j</em> that satisfies the following relation to
+determine which transition occurs:</p>
+  </li>
+</ol>
+
+<p><em>k<sub>i,j-1</sub></em> / <em>k<sub>i,tot</sub></em> &lt; <em>u<sub>1</sub></em> &lt; <em>k<sub>i,j</sub></em> / <em>k<sub>i,tot</sub></em></p>
+
+<ol>
+  <li>
+    <p>Replace state <em>i</em> with the selected state <em>j</em>.</p>
+  </li>
+  <li>
+    <p>Select another random number (<em>u<sub>2</sub></em>) between 0 and 1.</p>
+  </li>
+  <li>
+    <p>Update the simulation time (<em>t</em>) by adding the waiting time (Δ<em>t</em>)
+computed by sampling the probability density for the first
+transition out of state <em>I</em> to occur (Δ<em>t</em> =-ln(<em>u<sub>2</sub></em>)/<em>k<sub>i,tot</sub></em>)
+[1].</p>
+  </li>
+  <li>
+    <p>Repeat steps 1-8.</p>
+  </li>
+</ol>
+
+<p>The steps outlined above are implemented in a Jupyter notebook (with
+Python 3) to to simulate the reaction dynamics.</p>
+
+<p>First, numpy, scipy, and pyplot modules are imported:</p>
+
+<blockquote>
+  <p>import numpy as np</p>
+
+  <p>import scipy as sci</p>
+
+  <p>import matplotlib.pyplot as plt</p>
+</blockquote>
+
+<p>Next, the values of the rate constants in Scheme 1 are specified (Table
+2).</p>
+
+<p><img src="/assets/images/KMC_tutorial_1/Table2.png" alt="Table 2" /></p>
+
+<blockquote>
+  <p>kA_a0 = 10 # A adsorption constant</p>
+
+  <p>kB_a0 = 1 # B adsorption constant</p>
+
+  <p>kA_d = 1 # A desorption constant</p>
+
+  <p>k_AB = .1 # A conversion to B</p>
+
+  <p>kB_d = .1 # B desorption constant</p>
+
+  <p>k_BA = .01 # B conversion to A</p>
+</blockquote>
+
+<p>The state of the system is then initialized. At time zero, there the
+surface is uncovered. This is denoted by an index of 0. Indexes of 1 and
+2 represent A- and B-covered surfaces, respectively. With a bath
+containing 1000 molecules of <em>A</em> and zero molecules of <em>B</em>. The
+simulation will be run for 100000 events:</p>
+
+<blockquote>
+  <p># initial parameters #</p>
+
+  <p>t = 0 # initial time</p>
+
+  <p>L = 0 # initial state: 0 – empty; 1 – A*; 2 – B*</p>
+
+  <p>N_A = 100 # A adsorption constant</p>
+
+  <p>N_B = 0 # B adsorption constant</p>
+
+  <p>trials = 100000</p>
+
+  <p># vector for A, B, and t #</p>
+
+  <p>N_As = list([N_A])</p>
+
+  <p>N_Bs = list([N_B])</p>
+
+  <p>ts = list([t])</p>
+</blockquote>
+
+<p>The trajectory is now ready to be simulated with the parameterized rate
+constants and initial state specified. The trajectory is executed by
+evaluated steps 1-7 from the algorithm above then repeating these steps
+with the updated state of the system for a specified number of simulated
+events (“trials” above). The specified number of trials are executed by
+implementation in a for loop. Each execution of the loop then performs
+steps 1-7. The following code uses an intuitive (albeit inefficient)
+implementation with nested if statements used for purposes of
+illustration. To start, the loop is entered and two random numbers are
+drawn:</p>
+
+<blockquote>
+  <p>for i in range(trials):</p>
+
+  <p>u1 = np.random.rand(1) #rand for the particular process selected</p>
+
+  <p>u2 = np.random.rand(1) #rand for the time step</p>
+</blockquote>
+
+<p>Next, an if statement is used to determine which process to execute
+depending on the initial state:</p>
+
+<blockquote>
+  <p>if L == 0: #vacant site</p>
+
+  <p>…</p>
+
+  <p>elif L == 1: # A covered</p>
+
+  <p>…</p>
+
+  <p>elif L == 2: #B covered</p>
+
+  <p>…</p>
+</blockquote>
+
+<p>Then, the rate constants for transition from the current state are
+determined and constructed into an array (with an initial state of 0 as
+an example). The rate constant for <em>A</em> and <em>B</em> adsorption are multiplied
+by the molar fractions of A and B, respectively, to get rates:</p>
+
+<blockquote>
+  <p>if L == 0: #vacant site</p>
+
+  <p>#adsorption</p>
+
+  <p>kA_a = kA_a0 * (N_A)/(N_A + N_B) #adsorption rate of A based on
+prevalent A mole fraction</p>
+
+  <p>kB_a = kB_a0 * (N_B)/(N_A + N_B) #adsorption rate of B based on
+prevalent B mole fraction</p>
+
+  <p>ks = np.array([kA_a,kB_a])</p>
+</blockquote>
+
+<p>Then, the move to take is selected by comparing <em>u~1~</em> to a cumulative
+array of the ks of possible events.</p>
+
+<blockquote>
+  <p>k_tot = np.sum(ks) # get the total rate of transition from the sum of
+ks</p>
+
+  <p>k_stack = np.cumsum(ks) # get a cumulative array of ks for event
+selection</p>
+
+  <p>select = n1*k_tot # find the value in the cumulative array to select</p>
+
+  <p>#pick the first one that is larger than the select criteria</p>
+
+  <p>indexes = np.arange(len(k_stack))</p>
+
+  <p>ind_move = indexes[k_stack&gt;select][0]</p>
+</blockquote>
+
+<p>Next, the state of the system is updated depending on the move selected.
+If the move is 0, meaning <em>A</em> adsorbs, the next state becomes 1 (<em>A*</em>)
+and one <em>A</em> molecule is removed from the gas phase.</p>
+
+<blockquote>
+  <p>if ind_move == 0:</p>
+
+  <p>L = 1</p>
+
+  <p>N_A += -1</p>
+
+  <p>elif ind_move == 1:</p>
+
+  <p>L = 2</p>
+
+  <p>N_B += -1</p>
+</blockquote>
+
+<p>The rate constants for transition from the initial state are obtained
+and the next move is executed using a similar procedure to that outlined
+above when L= 1 or 2. The waiting time is then evaluated outside of the
+if statement using the frequency for transition computed and updates the
+simulation time:</p>
+
+<blockquote>
+  <p>t += - np.log(n2)/k_tot #t estable</p>
+</blockquote>
+
+<p>Finally, the new times and numbers of <em>A</em> and <em>B</em> are appended to their
+respective vectors to tract their time evolutions:</p>
+
+<blockquote>
+  <p>ts.append(t[0])</p>
+
+  <p>N_As.append(N_A)</p>
+
+  <p>N_Bs.append(N_B)…</p>
+</blockquote>
+
+<p>The system is evolved using the code above for 100000 steps. The first
+few states for a single trajectory are printed with corresponding time
+intervals as follows:</p>
+
+<p>Ls = (0,1,0,1,2,0,1,0,1, …)</p>
+
+<p>ts = (0.26, 0.48, 0.15, 0.21, 0.05, 0.33, 1.7, …)</p>
+
+<p>The mole fractions of <em>A</em> (<em>y<sub>A</sub></em>) and <em>B</em> (<em>y<sub>B</sub></em>) species present in
+the gas phase are plotted as a function of the simulation time (Figure
+1). Recall that the number of <em>A</em> or <em>B</em> decreases by one unit every
+time the state transitions from 0 to 1 or 2, respectively. Their values
+increase by one unit every time the state transitions from either 1 or 2
+to 0, respectively. The fraction of <em>A</em> decreases asymptotically towards
+an equilibrium value of around 0.11 while <em>B</em> increases asymptotically
+towards an equilibrium value of around 0.89. Their values approach this
+stable equilibrium value as fractions of <em>A</em> and <em>B</em> adjust to establish
+detailed balance.</p>
+
+<p><img src="/assets/images/KMC_tutorial_1/Figure1.png" alt="Figure 1" /></p>
+
+<p>The fraction of <em>B</em> (divided by <em>A</em> corresponds to an equilibrium
+constant (<em>K<sub>AB</sub></em>) of 9.9 via through <em>K<sub>AB</sub></em> = <em>y<sub>B</sub></em> / <em>y<sub>A</sub></em>. The
+equilibrium behavior is compared to the value obtained from
+deterministic equations derived from the elementary steps in Scheme 1. A
+relation between reactants and products for each elementary step in
+quasi-equilibrium is obtained as follows:</p>
+
+<p><img src="/assets/images/KMC_tutorial_1/Eq1.png" alt="Eq 1" /></p>
+
+<p>Solving this set of algebraic equations for the $y_{B}/y_{A}$ ratio
+gives a definition of $K_{AB}$ in terms of the forward and reverse rate
+constants in Scheme 1:</p>
+
+<p><img src="/assets/images/KMC_tutorial_1/Eq2.png" alt="Eq 2" /></p>
+
+<p>The <em>K<sub>AB</sub></em> determined from these rate constants is 10.0, in close
+agreement with the value obtained from the stable behavior in the
+trajectory.</p>
+
+<p><em>Exercises:</em></p>
+
+<ol>
+  <li>
+    <p>How do changes to the rate constants effect the equilibrium ratio</p>
+  </li>
+  <li>
+    <p>How do changes to the rate constants effect the time it takes to
+reach a stable <em>A-B</em> ratio</p>
+  </li>
+  <li>
+    <p>How can the code be modified to obtain steady-state reaction rates
+for A conversion to B at a fixed A mole fraction (<em>y<sub>A</sub></em>)?</p>
+  </li>
+</ol>
+
+<p><em>The next post in the series will show a solution to exercise 3</em></p>
+
+<p><em>References:</em></p>
+
+<p>[1] Reaction rate theory and rare events. B Peters. Elsevier, 2017. ISBN: 978-0-444-56349-1</p>
+
+<p>[2] Andersen M, Panosetti C, Reuter K. A Practical Guide to Surface Kinetic Monte Carlo Simulations. Front Chem. 2019;7:202.</p>
+
+<p><em>Appendix:</em></p>
+
+<p>The sample code is available as a Jupyter notebook entitled
+“kMC_A_B_rxn_single_site_eq.ipynb” at the ari-fischer GitHub page
+(<a href="https://github.com/ari-fischer/">https://github.com/ari-fischer/</a>) in the “kinetics_tutorial”
+repository under the “KMC_tutorials” folder</p>
+
+  </div><a class="u-url" href="/kinetics/tutorials/2023/07/23/welcome-to-jekyll.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ari Fischer</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ari Fischer</li><li><a class="u-email" href="mailto:ari.f.fischer10@gmail.com">ari.f.fischer10@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ari-fischer"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ari-fischer</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
