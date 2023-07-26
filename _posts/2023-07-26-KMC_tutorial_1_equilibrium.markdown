@@ -45,7 +45,7 @@ elementary reactions (Scheme 1). Table 1 shows the set of possible
 initial states and the final states that are formed after a transition
 along with the frequencies of these transitions.
 
-![Table 1](/assets/images/KMC_tutorial_1/Table1.png)
+![Table 1]({{ "/assets/images/KMC_tutorial_1/Table1.png" | relative_url }})
 
 The procedure required to execute a transition from a given initial
 state is shown next as an illustrative example. The reader is referred
@@ -92,7 +92,7 @@ First, numpy, scipy, and pyplot modules are imported:
 Next, the values of the rate constants in Scheme 1 are specified (Table
 2).
 
-![Table 2]({{site.baseurl}}/assets/images/KMC_tutorial_1/Table2.png)
+![Table 2]({{ "/assets/images/KMC_tutorial_1/Table2.png" | relative_url }})
 
 > kA_a0 = 10 \# A adsorption constant
 >
@@ -250,7 +250,7 @@ towards an equilibrium value of around 0.89. Their values approach this
 stable equilibrium value as fractions of *A* and *B* adjust to establish
 detailed balance.
 
-![Figure 1]({{site.baseurl}}/assets/images/KMC_tutorial_1/Figure1.png)
+![Figure 1]({{ "/assets/images/KMC_tutorial_1/Figure1.png" | relative_url }})
 
 The fraction of *B* (divided by *A* corresponds to an equilibrium
 constant (*K<sub>AB</sub>*) of 9.9 via through *K<sub>AB</sub>* = *y<sub>B</sub>* / *y<sub>A</sub>*. The
@@ -259,14 +259,13 @@ deterministic equations derived from the elementary steps in Scheme 1. A
 relation between reactants and products for each elementary step in
 quasi-equilibrium is obtained as follows:
 
-![Eq 1]({{site.baseurl}}/assets/images/KMC_tutorial_1/Eq1.png)
+![Eq 1]({{ "/assets/images/KMC_tutorial_1/Eq1.png" | relative_url }})
 
 Solving this set of algebraic equations for the $y_{B}/y_{A}$ ratio
 gives a definition of $K_{AB}$ in terms of the forward and reverse rate
 constants in Scheme 1:
 
-![Eq 2]({{site.baseurl}}{{/assets/images/KMC_tutorial_1/Eq2.png}})
-
+![Eq 2]({{ "/assets/images/KMC_tutorial_1/Eq2.png" | relative_url }})
 
 The *K<sub>AB</sub>* determined from these rate constants is 10.0, in close
 agreement with the value obtained from the stable behavior in the
