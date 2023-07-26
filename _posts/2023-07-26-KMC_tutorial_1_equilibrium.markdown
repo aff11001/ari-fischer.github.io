@@ -79,7 +79,7 @@ for transition from an initial state, *i*, is outlined in the following:
 8.  Repeat steps 1-8.
 
 The steps outlined above are implemented in a Jupyter notebook (with
-Python 3) to to simulate the reaction dynamics.
+Python 3) to to simulate the reaction dynamics. A sample code is available on Github (see appendix for details).
 
 First, numpy, scipy, and pyplot modules are imported:
 
