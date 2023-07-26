@@ -31,12 +31,12 @@ reaction that follows these steps.
 species *A* to *B* on a catalytic site (denoted by \*). The *k<sub>i</sub>* terms
 represent forward and reverse rate constants for each reaction step.
 
-![Scheme 1]({{site.baseurl}}/assets/images/KMC_tutorial_1/Scheme1.png)
+![Scheme1]({{ "/assets/images/KMC_tutorial_1/Scheme1.png" | relative_url }})
 
 **Scheme 2**: A sequence of elementary steps for acid-catalyzed
 1-propene isomerization to 2-propene.
 
-![Scheme 2]({{site.baseurl}}/assets/images/KMC_tutorial_1/Scheme2.png)
+![Scheme 2]({{ "/assets/images/KMC_tutorial_1/Scheme2.png" | relative_url }})
 
 Scheme 1 considers a catalytic site (\*) that can be either (i) empty,
 (ii) *A*-covered, or (iii) *B*-covered. Each state can transition into
