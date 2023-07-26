@@ -45,7 +45,7 @@ elementary reactions (Scheme 1). Table 1 shows the set of possible
 initial states and the final states that are formed after a transition
 along with the frequencies of these transitions.
 
-![Table 1]({{site.baseurl}}/assets/images/KMC_tutorial_1/Table1.png)
+![Table 1](/assets/images/KMC_tutorial_1/Table1.png)
 
 The procedure required to execute a transition from a given initial
 state is shown next as an illustrative example. The reader is referred
