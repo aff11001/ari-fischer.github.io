@@ -7,7 +7,7 @@ categories: Kinetics tutorials
 ---
 *Introduction:*
 
-![My image Name](/assets/images/profile_photo.jpg)
+![My image Name](/site/assets/images/profile_photo.jpg)
 
 Kinetic Monte Carlo (kMC) is a powerful tool for studying reaction
 kinetics when the set of important steps becomes too complicated for
