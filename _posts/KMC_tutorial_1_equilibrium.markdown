@@ -31,7 +31,7 @@ reaction that follows these steps.
 species *A* to *B* on a catalytic site (denoted by \*). The *k<sub>i</sub>* terms
 represent forward and reverse rate constants for each reaction step.
 
-![Scheme 1](/assets/images/KMC_tutorial_1/Scheme1.png)
+![Scheme 1](/assets/images/Scheme1.png)
 
 **Scheme 2**: A sequence of elementary steps for acid-catalyzed
 1-propene isomerization to 2-propene.
