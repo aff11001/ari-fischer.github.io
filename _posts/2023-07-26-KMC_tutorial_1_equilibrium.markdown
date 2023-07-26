@@ -33,7 +33,7 @@ represent forward and reverse rate constants for each reaction step.
 
 ![](/assets/images/profile_photo.jpg)
 
-![Scheme 1](KMC_tutorial_1/Scheme1.png)
+![Scheme 1](/_posts/KMC_tutorial_1/Scheme1.png)
 
 **Scheme 2**: A sequence of elementary steps for acid-catalyzed
 1-propene isomerization to 2-propene.
