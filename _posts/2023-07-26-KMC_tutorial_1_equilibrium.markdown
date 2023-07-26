@@ -265,7 +265,7 @@ Solving this set of algebraic equations for the $y_{B}/y_{A}$ ratio
 gives a definition of $K_{AB}$ in terms of the forward and reverse rate
 constants in Scheme 1:
 
-![Eq 2]({{site.baseurl}}/assets/images/KMC_tutorial_1/Eq2.png)
+![Eq 2]({{site.baseurl}}{{/assets/images/KMC_tutorial_1/Eq2.png}})
 
 
 The *K<sub>AB</sub>* determined from these rate constants is 10.0, in close
