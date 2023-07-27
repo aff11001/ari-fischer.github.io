@@ -194,12 +194,9 @@ containing 1000 molecules of <em>A</em> and zero molecules of <em>B</em>. The si
 </blockquote>
 
 <p>The trajectory is now ready to be simulated with the parameterized rate
-constants and initial state specified. The trajectory is executed by
-evaluated steps 1-7 from the algorithm above then repeating these steps
-with the updated state of the system for a specified number of simulated
-events (“trials” above). The specified number of trials are executed by
-implementation in a for loop. Each execution of the loop then performs
-steps 1-7. The following code uses an intuitive (albeit inefficient)
+constants and initial state specified. The specified number of trials are executed by
+implementation in a for loop. Each execution of the loop performs
+steps 1-7, then repeats the same code using the final state from the previous execution. The following code uses an intuitive (albeit inefficient)
 implementation with nested if statements used for purposes of
 illustration. To start, the loop is entered and two random numbers are
 drawn:</p>
