@@ -135,7 +135,7 @@ transition out of state <em>I</em> to occur (Δ<em>t</em> =-ln(<em>u<sub>2</sub>
 </ol>
 
 <p>The steps outlined above are implemented in a Jupyter notebook (with
-Python 3) to to simulate the reaction dynamics. A sample code is available on Github (see appendix for details).</p>
+Python 3) to simulate the reaction dynamics. A sample code is available on Github (see appendix for details).</p>
 
 <p>First, numpy, scipy, and pyplot modules are imported:</p>
 
@@ -166,11 +166,10 @@ Python 3) to to simulate the reaction dynamics. A sample code is available on Gi
   <p>k_BA = .01 # B conversion to A</p>
 </blockquote>
 
-<p>The state of the system is then initialized. At time zero, there the
+<p>The state of the system is then initialized. At time zero, the
 surface is uncovered. This is denoted by an index of 0. Indexes of 1 and
-2 represent A- and B-covered surfaces, respectively. With a bath
-containing 1000 molecules of <em>A</em> and zero molecules of <em>B</em>. The
-simulation will be run for 100000 events:</p>
+2 represent A- and B-covered surfaces, respectively. The active site is exposed to a bath initially
+containing 1000 molecules of <em>A</em> and zero molecules of <em>B</em>. The simulation with proceed for 100000 events:</p>
 
 <blockquote>
   <p># initial parameters #</p>

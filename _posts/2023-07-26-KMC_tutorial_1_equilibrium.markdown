@@ -79,7 +79,7 @@ for transition from an initial state, *i*, is outlined in the following:
 8.  Repeat steps 1-8.
 
 The steps outlined above are implemented in a Jupyter notebook (with
-Python 3) to to simulate the reaction dynamics. A sample code is available on Github (see appendix for details).
+Python 3) to simulate the reaction dynamics. A sample code is available on Github (see appendix for details).
 
 First, numpy, scipy, and pyplot modules are imported:
 
@@ -106,11 +106,10 @@ Next, the values of the rate constants in Scheme 1 are specified (Table
 >
 > k_BA = .01 \# B conversion to A
 
-The state of the system is then initialized. At time zero, there the
+The state of the system is then initialized. At time zero, the
 surface is uncovered. This is denoted by an index of 0. Indexes of 1 and
-2 represent A- and B-covered surfaces, respectively. With a bath
-containing 1000 molecules of *A* and zero molecules of *B*. The
-simulation will be run for 100000 events:
+2 represent A- and B-covered surfaces, respectively. The active site is exposed to a bath initially
+containing 1000 molecules of *A* and zero molecules of *B*. The simulation with proceed for 100000 events:
 
 > \# initial parameters \#
 >
