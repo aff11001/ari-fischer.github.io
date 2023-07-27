@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-07-27T13:00:19+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html" rel="alternate" type="text/html" title="Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python" /><published>2023-07-23T20:37:06+08:00</published><updated>2023-07-23T20:37:06+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html"><![CDATA[<p><em>Introduction:</em></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-07-27T21:22:10+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html" rel="alternate" type="text/html" title="Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python" /><published>2023-07-23T20:37:06+08:00</published><updated>2023-07-23T20:37:06+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html"><![CDATA[<p><em>Introduction:</em></p>
 
 <p>Kinetic Monte Carlo (kMC) is a powerful tool for studying reaction
 kinetics when the set of important steps becomes too complicated for
@@ -129,9 +129,9 @@ containing 1000 molecules of <em>A</em> and zero molecules of <em>B</em>. The si
 
   <p>L = 0 # initial state: 0 – empty; 1 – A*; 2 – B*</p>
 
-  <p>N_A = 100 # A adsorption constant</p>
+  <p>N_A = 1000 # number of A</p>
 
-  <p>N_B = 0 # B adsorption constant</p>
+  <p>N_B = 0 # number of B</p>
 
   <p>trials = 100000</p>
 

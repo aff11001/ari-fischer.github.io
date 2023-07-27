@@ -117,9 +117,9 @@ containing 1000 molecules of *A* and zero molecules of *B*. The simulation with 
 >
 > L = 0 \# initial state: 0 -- empty; 1 -- A\*; 2 -- B\*
 >
-> N_A = 100 \# A adsorption constant
+> N_A = 1000 \# number of A
 >
-> N_B = 0 \# B adsorption constant
+> N_B = 0 \# number of B
 >
 > trials = 100000
 >
