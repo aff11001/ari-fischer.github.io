@@ -25,7 +25,7 @@ A simple catalytic reaction network for the conversion of species *A* to
 *B* is depicted in Scheme 1. It consists of *A* adsorption at a
 catalytic site (denoted by \*) to form *A\** (step 1), *A\** conversion
 to *B\** (step 2), and *B\** desorption to form *B.* Acid-catalyzed
-1-propene isomerization to 2-propene (Scheme 2) is one example of a
+1-butene isomerization to 2-butene (Scheme 2) is one example of a
 reaction that follows these steps.
 
 **Scheme 1**: A sequence of elementary steps for the conversion of
@@ -35,7 +35,7 @@ represent forward and reverse rate constants for each reaction step.
 ![Scheme1]({{ "/assets/images/KMC_tutorial_1/Scheme1.png" | relative_url }})
 
 **Scheme 2**: A sequence of elementary steps for acid-catalyzed
-1-propene isomerization to 2-propene.
+1-butene isomerization to 2-butene.
 
 ![Scheme 2]({{ "/assets/images/KMC_tutorial_1/Scheme2.png" | relative_url }})
 

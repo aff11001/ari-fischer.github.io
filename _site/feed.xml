@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-07-28T13:58:55+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html" rel="alternate" type="text/html" title="Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python" /><published>2023-07-23T20:37:06+08:00</published><updated>2023-07-23T20:37:06+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html"><![CDATA[<p><em>Introduction:</em></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-07-29T07:04:25+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html" rel="alternate" type="text/html" title="Run a simple kinetic Monte Carlo simulation for catalytic reaction kinetics in Python" /><published>2023-07-23T20:37:06+08:00</published><updated>2023-07-23T20:37:06+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html"><![CDATA[<p><em>Introduction:</em></p>
 
 <p>Kinetic Monte Carlo (kMC) is a powerful tool for studying reaction
 kinetics when the set of important steps becomes too complicated for
@@ -18,7 +18,7 @@ conventional kinetic analysis of deterministic rate equations.</p>
 <em>B</em> is depicted in Scheme 1. It consists of <em>A</em> adsorption at a
 catalytic site (denoted by *) to form <em>A*</em> (step 1), <em>A*</em> conversion
 to <em>B*</em> (step 2), and <em>B*</em> desorption to form <em>B.</em> Acid-catalyzed
-1-propene isomerization to 2-propene (Scheme 2) is one example of a
+1-butene isomerization to 2-butene (Scheme 2) is one example of a
 reaction that follows these steps.</p>
 
 <p><strong>Scheme 1</strong>: A sequence of elementary steps for the conversion of
@@ -28,7 +28,7 @@ represent forward and reverse rate constants for each reaction step.</p>
 <p><img src="/site/assets/images/KMC_tutorial_1/Scheme1.png" alt="Scheme1" /></p>
 
 <p><strong>Scheme 2</strong>: A sequence of elementary steps for acid-catalyzed
-1-propene isomerization to 2-propene.</p>
+1-butene isomerization to 2-butene.</p>
 
 <p><img src="/site/assets/images/KMC_tutorial_1/Scheme2.png" alt="Scheme 2" /></p>
 
