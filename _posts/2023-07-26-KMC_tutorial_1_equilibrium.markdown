@@ -19,6 +19,7 @@ reaction. The results are then compared with those obtained from
 conventional kinetic analysis of deterministic rate equations.
 
 *Tutorial:*
+(link to code: https://github.com/ari-fischer/kinetics_tutorial/tree/9e7ea49ca8f6c48bcc8ef1c22e1c0fb8d78b9a61/KMC_tutorials)
 
 A simple catalytic reaction network for the conversion of species *A* to
 *B* is depicted in Scheme 1. It consists of *A* adsorption at a
