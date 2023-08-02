@@ -16,6 +16,7 @@ can be extracted from these trajectories, such as reaction rates and
 rate constants. As a first step to running kMC simulations, a simple kMC code is developed to simulate a catalytic reaction as it proceeds towards thermodynamic equilibrium. The equilibrium behavior is shown to be consistent with that determined from the kinetic parameters. The next parts in the series will show how reaction rates are obtained from these simulations.
 
 *Tutorial:*
+
 (link to code: https://github.com/ari-fischer/kinetics_tutorial/tree/9e7ea49ca8f6c48bcc8ef1c22e1c0fb8d78b9a61/KMC_tutorials)
 
 A simple catalytic reaction network for the conversion of species *A* to
