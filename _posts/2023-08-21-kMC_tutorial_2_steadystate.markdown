@@ -6,7 +6,6 @@ kinetic descriptions."
 date:   2023-08-19 20:37:06 +0800
 categories: Kinetics tutorials
 ---
-
 *Introduction:*
 
 The previous guide
@@ -382,4 +381,9 @@ Kinetic Monte Carlo Simulations. Front Chem. 2019;7:202.
 \[2\] Reaction rate theory and rare events (Chapter 14). B Peters.
 Elsevier, 2017. ISBN: 978-0-444-56349-1
 
-Appendix
+*Appendix:*
+
+The sample code is available as a Jupyter notebook entitled
+"kMC_A_B_rxn_single_site_eq.ipynb" at the ari-fischer GitHub page
+(<https://github.com/ari-fischer/>) in the "kinetics_tutorial"
+repository under the "KMC_tutorials" folder
