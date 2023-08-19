@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Simulate steady-state kinetics for catalytic reactions with kinetic
-Monte Carlo in Python and understand their connection to mean field
+title:  "Steady-state kinetics with kinetic
+Monte Carlo in Python and the connection to mean field
 kinetic descriptions."
-date:   2023-08-19 20:37:06 +0800
+date:   2023-08-19 00:00:00 +0800
 categories: Kinetics tutorials
 ---
 *Introduction:*
