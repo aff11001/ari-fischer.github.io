@@ -1,8 +1,11 @@
-Simulate steady-state kinetics for catalytic reactions with kinetic
+---
+layout: post
+title:  "Simulate steady-state kinetics for catalytic reactions with kinetic
 Monte Carlo in Python and understand their connection to mean field
-kinetic descriptions.
-
-Ari F. Fischer
+kinetic descriptions."
+date:   2023-08-19 20:37:06 +0800
+categories: Kinetics tutorials
+---
 
 *Introduction:*
 
