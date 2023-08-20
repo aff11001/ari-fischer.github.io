@@ -43,8 +43,7 @@ shows the desorption of *B*\* to form the product *B* and a vacant \*-site.
 species *A* to *B* on a catalytic site (denoted by \*). The *k~i~* terms
 represent forward and reverse rate constants for each reaction step.
 
-![](media/image1.png){width="4.947685914260718in"
-height="2.991852580927384in"}
+![Scheme 1]({{ "/assets/images/KMC_tutorial_2/scheme1.png" | relative_url }})
 
 Mean field rate expressions for each of the elementary step in Scheme 1
 occurring on *L~\*~* active sites are obtained by considering each step
@@ -53,8 +52,7 @@ reactant mole fractions from the law of mass action (i.e. that the rate
 of reaction is proportional to the product of reactant thermodynamic
 activities) \[2\]:
 
-![](media/image2.png){width="2.7436154855643045in"
-height="0.7755293088363955in"}
+![eq 1]({{ "/assets/images/KMC_tutorial_2/eqn1.png" | relative_url }})
 
 Here, *y~A~* and *y~B~* are the mole fractions of *A* and *B*,
 respectively; $\theta_{A}$, $\theta_{B}$, and $\theta_{*}$ are the
@@ -69,8 +67,7 @@ the surface to re-form *A*\* (*k~-B\*~/k~BA~*=100000), indicating that
 *B*\* formation in Step 2 is irreversible. The rate of Step 2 can
 therefore be restated as:
 
-![](media/image3.png){width="2.743403324584427in"
-height="0.48511373578302713in"}
+![eq 2]({{ "/assets/images/KMC_tutorial_2/eqn2.png" | relative_url }})
 
 Secondly, *A*\* desorbs much faster than it reacts to form *B*\*
 (*k~-A\*~/k~AB~*=100) indicating that Step 1 occurs at quasi-equilibrium
@@ -78,14 +75,12 @@ Secondly, *A*\* desorbs much faster than it reacts to form *B*\*
 the net rate of reaction). Approximating the net rate of Step 1 as zero
 gives the quasi-equilibrium coverage of *A*\*:
 
-![](media/image4.png){width="2.586032370953631in"
-height="0.6183989501312336in"}
+![eq 3]({{ "/assets/images/KMC_tutorial_2/eqn3.png" | relative_url }})
 
 The coverage of vacant \*-sites, *A*\*, and *B*\* are related by the
 conservation of occupied and unoccupied *L*\* sites, given by:
 
-![](media/image5.png){width="2.7526115485564304in"
-height="0.4535564304461942in"}
+![eq 4]({{ "/assets/images/KMC_tutorial_2/eqn4.png" | relative_url }})
 
 The coverage of *B*\* is assumed to be negligible at low conversion (low
 *y~B~*) because *B*\* desorbs faster than it adsorbs
@@ -93,22 +88,19 @@ The coverage of *B*\* is assumed to be negligible at low conversion (low
 neglecting the $\theta_{B}$ term, replacing $\theta_{A}$ with its value
 from equation 5, and solving for $\theta_{*}$:
 
-![](media/image6.png){width="3.07963801399825in"
-height="0.6475142169728784in"}
+![eq 5]({{ "/assets/images/KMC_tutorial_2/eqn5.png" | relative_url }})
 
 The net rate of *B* formation is obtained by replacing the $\theta_{*}$
 term in equation 5 with its value from equation 7, and then substituting
 the resulting expression for $\theta_{A}$ into equation 4:
 
-![](media/image7.png){width="2.8073479877515313in"
-height="0.6791972878390201in"}
+![eq 6]({{ "/assets/images/KMC_tutorial_2/eqn6.png" | relative_url }})
 
 This equation thus relates the rate of *B* formation normalized by the
 number of \*-sites to the mole fraction of *A* and the kinetic constants
 for its reaction at \*-sites.
 
-![](media/image8.png){width="5.23387467191601in"
-height="1.2925218722659668in"}
+![table 1]({{ "/assets/images/KMC_tutorial_2/table1.png" | relative_url }})
 
 Figure 1 shows the effect of *y~A~* on the coverages of vacant \*-sites
 and *A*\* (left) and on the rate of *B* formation (right) (with *y~A~*
@@ -118,8 +110,7 @@ and *A* adsorption becomes more favorable. The rate of *B* formation
 increases proportional to the *A\** coverage, reflecting the functional
 form of equation 4.
 
-![](media/image9.png){width="5.878472222222222in"
-height="3.6694444444444443in"}
+![figure 1]({{ "/assets/images/KMC_tutorial_2/figure1.png" | relative_url }})
 
 **Figure 1:** *A*\* and vacant \*-site coverages (left) and *B*
 formation rate (right) as a function of *A* mole fraction (*y~A~*).
@@ -264,7 +255,7 @@ appearance of such over long timescales in Figure 2a), but is instead
 discrete (because only integer numbers of product can form, not
 fractions of one).
 
-![](media/image10.png){width="3.9631944444444445in" height="3.0in"}
+![figure 2]({{ "/assets/images/KMC_tutorial_2/figure2.png" | relative_url }})
 
 **Figure 2:** Number of products formed as a function of simulation time
 after a long time (left) and shorter time interval (right).
@@ -353,8 +344,7 @@ agreement reflects the fact that the kMC simulation samples the same
 distribution of states as the ensemble considered in deriving the
 Langmuir-Hinshellwood kinetic expressions.
 
-![](media/image11.png){width="5.873611111111111in"
-height="3.670138888888889in"}
+![figure 3]({{ "/assets/images/KMC_tutorial_2/figure3.png" | relative_url }})
 
 **Figure 3:** Coverage of *A*\* and vacant \*-sites (Left) and *B*
 formation rates as a function of *y~A~* mole fractions from mean-field
