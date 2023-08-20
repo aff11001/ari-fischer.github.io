@@ -6,6 +6,9 @@ kinetic descriptions."
 date:   2023-08-19 00:00:00 +0800
 categories: Kinetics tutorials
 ---
+
+![TOC]({{ "/assets/images/KMC_tutorial_2/TOC.png" | relative_url }})
+
 *Introduction:*
 
 The previous guide
