@@ -40,13 +40,13 @@ Step 2 shows the conversion of *A*\* to *B*\* at the surface. Step 3
 shows the desorption of *B*\* to form the product *B* and a vacant \*-site.
 
 **Scheme 1**: A sequence of elementary steps for the conversion of
-species *A* to *B* on a catalytic site (denoted by \*). The *k~i~* terms
+species *A* to *B* on a catalytic site (denoted by \*). The *k<sub>i</sub>* terms
 represent forward and reverse rate constants for each reaction step.
 
 ![Scheme 1]({{ "/assets/images/KMC_tutorial_2/scheme1.png" | relative_url }})
 
 Mean field rate expressions for each of the elementary step in Scheme 1
-occurring on *L~\*~* active sites are obtained by considering each step
+occurring on *L<sub>*</sub>* active sites are obtained by considering each step
 to be reversible and with their forward and reverse rates related to
 reactant mole fractions from the law of mass action (i.e. that the rate
 of reaction is proportional to the product of reactant thermodynamic
@@ -54,23 +54,23 @@ activities) \[2\]:
 
 ![eq 1]({{ "/assets/images/KMC_tutorial_2/eqn1.png" | relative_url }})
 
-Here, *y~A~* and *y~B~* are the mole fractions of *A* and *B*,
+Here, *y<sub>A</sub>* and *y<sub>B</sub>* are the mole fractions of *A* and *B*,
 respectively; $\theta_{A}$, $\theta_{B}$, and $\theta_{*}$ are the
 fractional surface coverages of *A*, *B* and vacancies on *L\** sites;
-and *k~i~* are rate constants with corresponding steps denoted in Scheme
+and *k<sub>i</sub>* are rate constants with corresponding steps denoted in Scheme
 1.
 
 An analytical expression for the rate of *B* formation can be derived
 based on the following assumptions consistent with the values of rate
 constants in Table 1. First, *B*\* desorbs much faster than it reacts at
-the surface to re-form *A*\* (*k~-B\*~/k~BA~*=100000), indicating that
+the surface to re-form *A*\* (*k<sub>-B</sub>*~/*k<sub>BA</sub>*=100000), indicating that
 *B*\* formation in Step 2 is irreversible. The rate of Step 2 can
 therefore be restated as:
 
 ![eq 2]({{ "/assets/images/KMC_tutorial_2/eqn2.png" | relative_url }})
 
 Secondly, *A*\* desorbs much faster than it reacts to form *B*\*
-(*k~-A\*~/k~AB~*=100) indicating that Step 1 occurs at quasi-equilibrium
+(*k<sub>-A</sub>*~/*k<sub>AB</sub>*=100) indicating that Step 1 occurs at quasi-equilibrium
 (i.e. the forward and reverse rates of Step 1 are both much larger than
 the net rate of reaction). Approximating the net rate of Step 1 as zero
 gives the quasi-equilibrium coverage of *A*\*:
@@ -84,7 +84,7 @@ conservation of occupied and unoccupied *L*\* sites, given by:
 
 The coverage of *B*\* is assumed to be negligible at low conversion (low
 *y~B~*) because *B*\* desorbs faster than it adsorbs
-(*k~-B\*~/k~B\*~*=10). An expression for $\theta_{*}$ can be obtained by
+(*k<sub>-B</sub>*~/*k<sub>B</sub>*=10). An expression for $\theta_{*}$ can be obtained by
 neglecting the $\theta_{B}$ term, replacing $\theta_{A}$ with its value
 from equation 5, and solving for $\theta_{*}$:
 
@@ -102,10 +102,10 @@ for its reaction at \*-sites.
 
 ![table 1]({{ "/assets/images/KMC_tutorial_2/table1.png" | relative_url }})
 
-Figure 1 shows the effect of *y~A~* on the coverages of vacant \*-sites
-and *A*\* (left) and on the rate of *B* formation (right) (with *y~A~*
+Figure 1 shows the effect of *y<sub>A</sub>* on the coverages of vacant \*-sites
+and *A*\* (left) and on the rate of *B* formation (right) (with *y<sub>A</sub>*
 changed by diluting *A* with an inert gas like He). Intuitively,
-coverages of *A\** increase and vacant \* decrease as *y~A~* increases
+coverages of *A\** increase and vacant \* decrease as *y<sub>A</sub>* increases
 and *A* adsorption becomes more favorable. The rate of *B* formation
 increases proportional to the *A\** coverage, reflecting the functional
 form of equation 4.
@@ -113,7 +113,7 @@ form of equation 4.
 ![figure 1]({{ "/assets/images/KMC_tutorial_2/figure1.png" | relative_url }})
 
 **Figure 1:** *A*\* and vacant \*-site coverages (left) and *B*
-formation rate (right) as a function of *A* mole fraction (*y~A~*).
+formation rate (right) as a function of *A* mole fraction (*y<sub>A</sub>*).
 
 Equation 8 relates the macroscopic rate of *B* formation to the
 macroscopic mole fraction of reactant *A*. Its derivation requires a
