@@ -156,7 +156,7 @@ simulation.
 *Adapting the kMC code to simulate steady-state behaviors:*
 
 *(link to code:
-https://github.com/ari-fischer/kinetics_tutorial/tree/92e92c102a27a431a2ba9d655732d157fef8f4dc/KMC_tutorials)*
+<https://github.com/ari-fischer/kinetics_tutorial/tree/92e92c102a27a431a2ba9d655732d157fef8f4dc/KMC_tutorials>)*
 
 The model developed in the previous guide (to simulate thermodynamic
 behaviors) includes a bath of reactant *A* and product *B*, initialized
