@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-19T17:33:19+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><em>Introduction:</em></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-20T08:38:22+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><em>Introduction:</em></p>
 
 <p>The previous guide
 (<a href="https://ari-fischer.github.io/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html">https://ari-fischer.github.io/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html</a>)
@@ -24,14 +24,11 @@ descriptions of reaction kinetics.</p>
 
 <p><em>Analyzing steady-state kinetics with mean field kinetic descriptions:</em></p>
 
-<blockquote>
-  <p>Scheme 1 shows the sequence of elementary steps that mediates <em>A</em>
+<p>Scheme 1 shows the sequence of elementary steps that mediates <em>A</em>
 conversion to <em>B</em> on a catalyst surface. Step 1 shows the adsorption
 of <em>A</em> to a vacant *-site (denoted by *) to form <em>A</em> to form <em>A</em>*.
 Step 2 shows the conversion of <em>A</em>* to <em>B</em>* at the surface. Step 3
-shows the desorption of <em>B</em>* to form the product <em>B</em> and a vacant
-*-site.</p>
-</blockquote>
+shows the desorption of <em>B</em>* to form the product <em>B</em> and a vacant *-site.</p>
 
 <p><strong>Scheme 1</strong>: A sequence of elementary steps for the conversion of
 species <em>A</em> to <em>B</em> on a catalytic site (denoted by *). The <em>k~i~</em> terms
@@ -164,11 +161,13 @@ https://github.com/ari-fischer/kinetics_tutorial/tree/92e92c102a27a431a2ba9d6557
 behaviors) includes a bath of reactant <em>A</em> and product <em>B</em>, initialized
 at zero time as follows:</p>
 
-<p>&gt;&gt;# initialize:</p>
+<blockquote>
+  <h1 id="initialize">initialize:</h1>
 
-<p>&gt;&gt;N_A = 1000</p>
+  <p>N_A = 1000</p>
 
-<p>&gt;&gt;N_B = 0</p>
+  <p>N_B = 0</p>
+</blockquote>
 
 <p>The catalyst surface interacts with the reservoir in each step of the
 kMC simulation by either (i) removing <em>A</em> or <em>B</em> from the reservoir if
@@ -179,19 +178,21 @@ for that step was to adsorb <em>A</em>, then one <em>A</em> was removed from the
 reservoir (“N_A += -1”) and the state of the site was changed to the
 <em>A</em>-covered state (“L = 1”), implemented as follows:</p>
 
-<p>&gt;&gt;for i in range(trials): #vacant site</p>
+<blockquote>
+  <p>for i in range(trials): #vacant site</p>
 
-<p>&gt;&gt; …</p>
+  <p>…</p>
 
-<p>&gt;&gt; if L == 0: #vacant site</p>
+  <p>if L == 0: #vacant site</p>
 
-<p>&gt;&gt; …</p>
+  <p>…</p>
 
-<p>&gt;&gt; if ind_move == 0: # A adsorption selected</p>
+  <p>if ind_move == 0: # A adsorption selected</p>
 
-<p>&gt;&gt; L = 1 # change from vacant site to A-covered site (A*)</p>
+  <p>L = 1 # change from vacant site to A-covered site (A*)</p>
 
-<p>&gt;&gt; N_A += -1 # remove one species A from the reservoir</p>
+  <p>N_A += -1 # remove one species A from the reservoir</p>
+</blockquote>
 
 <p>As the simulation progresses, <em>A</em> is progressively consumed and <em>B</em>
 generated until the ratio of <em>A</em> to <em>B</em> in the reservoir establishes
@@ -212,27 +213,31 @@ the <em>B</em>-desorption step (“N_B += 1”). We still, however, want to keep
 track of the number of products formed during a simulation, so the we
 define a number of products formed “N_P” initialized as:</p>
 
-<p>&gt;&gt;N_P = 0</p>
+<blockquote>
+  <p>N_P = 0</p>
 
-<p>&gt;&gt;…</p>
+  <p>…</p>
 
-<p>&gt;&gt;N_Ps = list([N_P])</p>
+  <p>N_Ps = list([N_P])</p>
+</blockquote>
 
 <p>And we add 1 to this every time <em>B</em> desorbs from the site:</p>
 
-<p>&gt;&gt;for i in range(trials): #vacant site</p>
+<blockquote>
+  <p>for i in range(trials): #vacant site</p>
 
-<p>&gt;&gt; …</p>
+  <p>…</p>
 
-<p>&gt;&gt; elif L == 2: #vacant site</p>
+  <p>elif L == 2: #vacant site</p>
 
-<p>&gt;&gt; …</p>
+  <p>…</p>
 
-<p>&gt;&gt; if ind_move == 0: # A adsorption selected</p>
+  <p>if ind_move == 0: # A adsorption selected</p>
 
-<p>&gt;&gt; L = 0</p>
+  <p>L = 0</p>
 
-<p>&gt;&gt; N_P += 1#add this one in as a tracer of products formed</p>
+  <p>N_P += 1#add this one in as a tracer of products formed</p>
+</blockquote>
 
 <p>This N_P is simply a tracker of the number of <em>B</em> products formed, but
 does not influence the frequencies of any steps (because no rate
@@ -266,32 +271,35 @@ taking time-averages of these quantities over a long enough simulation
 time. Rates are obtained by normalizing the number of products formed by
 the time elapsed:</p>
 
-<p>&gt;&gt;#calculate rates</p>
+<blockquote>
+  <p>#calculate rates</p>
 
-<p>&gt;&gt;rates = np.sum(N_Ps)/np.sum(ts)</p>
+  <p>rates = np.sum(N_Ps)/np.sum(ts)</p>
+</blockquote>
 
 <p>Coverages are obtained by finding the amount of time the system exists
 in each state, and normalizing by the total simulation time, shown for a
 vacant surface, for instance, with L=0:</p>
 
-<p>&gt;&gt;#convert Ls into np array, and get rid of last element to report
-time elapsed for coverages</p>
+<blockquote>
+  <p>#convert Ls into np array, and get rid of last element to report time elapsed for coverages</p>
 
-<p>&gt;&gt;Ls_np = np.array(Ls[0:-1])</p>
+  <p>Ls_np = np.array(Ls[0:-1])</p>
 
-<p>&gt;&gt;#indexes where surface is vacant (L==0)</p>
+  <p>#indexes where surface is vacant (L==0)</p>
 
-<p>&gt;&gt;L0_ind = np.where(Ls_np == 0)</p>
+  <p>L0_ind = np.where(Ls_np == 0)</p>
 
-<p>&gt;&gt;ts_np = np.array(ts)</p>
+  <p>ts_np = np.array(ts)</p>
 
-<p>&gt;&gt;#time elapsed in for each instance where L==0</p>
+  <p>#time elapsed in for each instance where L==0</p>
 
-<p>&gt;&gt;time_L0 = np.sum(ts_np[L0_ind[0]+1]-ts_np[L0_ind[0]])</p>
+  <p>time_L0 = np.sum(ts_np[L0_ind[0]+1]-ts_np[L0_ind[0]])</p>
 
-<p>&gt;&gt;#normalize vacant time with total elapsed time</p>
+  <p>#normalize vacant time with total elapsed time</p>
 
-<p>&gt;&gt;cov_v = time_L0/ts_np[-1]</p>
+  <p>cov_v = time_L0/ts_np[-1]</p>
+</blockquote>
 
 <p>The simulation coverages and rates can be reported from these averages
 as follows:</p>
@@ -315,25 +323,29 @@ constant, zero <em>y~B~</em> values are obtained by initializing the simulation
 with different numbers of N_A, for a fixed total number of species in
 the reservoir, denoted as N_tot:</p>
 
-<p>&gt;&gt; # initialize:</p>
+<blockquote>
+  <p># initialize:</p>
 
-<p>&gt;&gt; …</p>
+  <p>…</p>
 
-<p>&gt;&gt; N_tot = 1000</p>
+  <p>N_tot = 1000</p>
+</blockquote>
 
 <p>Then, kA_a and kB_a values are parameterized based on N_A and N_B
 normalized by N_tot, instead of by the sum of N_A and N_B, to reflect
 other inert species (like He) making up the balance in the reservoir:</p>
 
-<p>&gt;&gt;for i in range(trials):</p>
+<blockquote>
+  <p>for i in range(trials):</p>
 
-<p>&gt;&gt; …</p>
+  <p>…</p>
 
-<p>&gt;&gt; if L == 0: #vacant site</p>
+  <p>if L == 0: #vacant site</p>
 
-<p>&gt;&gt; kA_a = kA_a0 * (N_A)/(N_tot)</p>
+  <p>kA_a = kA_a0 * (N_A)/(N_tot)</p>
 
-<p>&gt;&gt; kB_a = kB_a0 * (N_B)/(N_tot)</p>
+  <p>kB_a = kB_a0 * (N_B)/(N_tot)</p>
+</blockquote>
 
 <p>Running the simulation for a series of N_A values, and constant N_tot
 and N_B (zero), reproduces the trend from Figure 1. These data are shown

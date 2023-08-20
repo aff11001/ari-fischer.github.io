@@ -32,12 +32,11 @@ descriptions of reaction kinetics.
 
 *Analyzing steady-state kinetics with mean field kinetic descriptions:*
 
-> Scheme 1 shows the sequence of elementary steps that mediates *A*
-> conversion to *B* on a catalyst surface. Step 1 shows the adsorption
-> of *A* to a vacant \*-site (denoted by \*) to form *A* to form *A*\*.
-> Step 2 shows the conversion of *A*\* to *B*\* at the surface. Step 3
-> shows the desorption of *B*\* to form the product *B* and a vacant
-> \*-site.
+Scheme 1 shows the sequence of elementary steps that mediates *A*
+conversion to *B* on a catalyst surface. Step 1 shows the adsorption
+of *A* to a vacant \*-site (denoted by \*) to form *A* to form *A*\*.
+Step 2 shows the conversion of *A*\* to *B*\* at the surface. Step 3
+shows the desorption of *B*\* to form the product *B* and a vacant \*-site.
 
 **Scheme 1**: A sequence of elementary steps for the conversion of
 species *A* to *B* on a catalytic site (denoted by \*). The *k~i~* terms
@@ -170,11 +169,11 @@ The model developed in the previous guide (to simulate thermodynamic
 behaviors) includes a bath of reactant *A* and product *B*, initialized
 at zero time as follows:
 
-\>\># initialize:
-
-\>\>N_A = 1000
-
-\>\>N_B = 0
+># initialize:
+> 
+>N_A = 1000
+>
+>N_B = 0
 
 The catalyst surface interacts with the reservoir in each step of the
 kMC simulation by either (i) removing *A* or *B* from the reservoir if
@@ -185,19 +184,19 @@ for that step was to adsorb *A*, then one *A* was removed from the
 reservoir ("N_A += -1") and the state of the site was changed to the
 *A*-covered state ("L = 1"), implemented as follows:
 
-\>\>for i in range(trials): #vacant site
-
-\>\> ...
-
-\>\> if L == 0: #vacant site
-
-\>\> ...
-
-\>\> if ind_move == 0: \# A adsorption selected
-
-\>\> L = 1 \# change from vacant site to A-covered site (A\*)
-
-\>\> N_A += -1 \# remove one species A from the reservoir
+>for i in range(trials): #vacant site
+>
+>...
+>
+>if L == 0: #vacant site
+>
+> ...
+>
+> if ind_move == 0: \# A adsorption selected
+>
+> L = 1 \# change from vacant site to A-covered site (A\*)
+>
+> N_A += -1 \# remove one species A from the reservoir
 
 As the simulation progresses, *A* is progressively consumed and *B*
 generated until the ratio of *A* to *B* in the reservoir establishes
@@ -218,27 +217,27 @@ the *B*-desorption step ("N_B += 1"). We still, however, want to keep
 track of the number of products formed during a simulation, so the we
 define a number of products formed "N_P" initialized as:
 
-\>\>N_P = 0
-
-\>\>...
-
-\>\>N_Ps = list(\[N_P\])
+>N_P = 0
+>
+>...
+>
+>N_Ps = list(\[N_P\])
 
 And we add 1 to this every time *B* desorbs from the site:
 
-\>\>for i in range(trials): #vacant site
-
-\>\> ...
-
-\>\> elif L == 2: #vacant site
-
-\>\> ...
-
-\>\> if ind_move == 0: \# A adsorption selected
-
-\>\> L = 0
-
-\>\> N_P += 1#add this one in as a tracer of products formed
+>for i in range(trials): #vacant site
+>
+> ...
+>
+> elif L == 2: #vacant site
+>
+> ...
+>
+> if ind_move == 0: \# A adsorption selected
+>
+> L = 0
+>
+> N_P += 1#add this one in as a tracer of products formed
 
 This N_P is simply a tracker of the number of *B* products formed, but
 does not influence the frequencies of any steps (because no rate
@@ -272,32 +271,31 @@ taking time-averages of these quantities over a long enough simulation
 time. Rates are obtained by normalizing the number of products formed by
 the time elapsed:
 
-\>\>#calculate rates
-
-\>\>rates = np.sum(N_Ps)/np.sum(ts)
+>#calculate rates
+>
+>rates = np.sum(N_Ps)/np.sum(ts)
 
 Coverages are obtained by finding the amount of time the system exists
 in each state, and normalizing by the total simulation time, shown for a
 vacant surface, for instance, with L=0:
 
-\>\>#convert Ls into np array, and get rid of last element to report
-time elapsed for coverages
-
-\>\>Ls_np = np.array(Ls\[0:-1\])
-
-\>\>#indexes where surface is vacant (L==0)
-
-\>\>L0_ind = np.where(Ls_np == 0)
-
-\>\>ts_np = np.array(ts)
-
-\>\>#time elapsed in for each instance where L==0
-
-\>\>time_L0 = np.sum(ts_np\[L0_ind\[0\]+1\]-ts_np\[L0_ind\[0\]\])
-
-\>\>#normalize vacant time with total elapsed time
-
-\>\>cov_v = time_L0/ts_np\[-1\]
+>#convert Ls into np array, and get rid of last element to report time elapsed for coverages
+>
+>Ls_np = np.array(Ls\[0:-1\])
+>
+>#indexes where surface is vacant (L==0)
+>
+>L0_ind = np.where(Ls_np == 0)
+>
+>ts_np = np.array(ts)
+>
+>#time elapsed in for each instance where L==0
+>
+>time_L0 = np.sum(ts_np\[L0_ind\[0\]+1\]-ts_np\[L0_ind\[0\]\])
+>
+>#normalize vacant time with total elapsed time
+>
+>cov_v = time_L0/ts_np\[-1\]
 
 The simulation coverages and rates can be reported from these averages
 as follows:
@@ -321,25 +319,25 @@ constant, zero *y~B~* values are obtained by initializing the simulation
 with different numbers of N_A, for a fixed total number of species in
 the reservoir, denoted as N_tot:
 
-\>\> \# initialize:
-
-\>\> ...
-
-\>\> N_tot = 1000
+> \# initialize:
+>
+> ...
+>
+> N_tot = 1000
 
 Then, kA_a and kB_a values are parameterized based on N_A and N_B
 normalized by N_tot, instead of by the sum of N_A and N_B, to reflect
 other inert species (like He) making up the balance in the reservoir:
 
-\>\>for i in range(trials):
-
-\>\> ...
-
-\>\> if L == 0: #vacant site
-
-\>\> kA_a = kA_a0 \* (N_A)/(N_tot)
-
-\>\> kB_a = kB_a0 \* (N_B)/(N_tot)
+>for i in range(trials):
+>
+> ...
+>
+> if L == 0: #vacant site
+>
+> kA_a = kA_a0 \* (N_A)/(N_tot)
+>
+> kB_a = kB_a0 \* (N_B)/(N_tot)
 
 Running the simulation for a series of N_A values, and constant N_tot
 and N_B (zero), reproduces the trend from Figure 1. These data are shown
