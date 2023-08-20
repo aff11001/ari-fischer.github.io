@@ -30,6 +30,7 @@ reaction. In doing so, it becomes clear how dynamic behaviors gleaned
 from kMC simulations reflect the same kinetics as those from mean-field
 descriptions of reaction kinetics.
 
+
 *Analyzing steady-state kinetics with mean field kinetic descriptions:*
 
 Scheme 1 shows the sequence of elementary steps that mediates *A*
@@ -160,6 +161,7 @@ quantities obtained from the mean field kinetic models derived above.
 These time-averaged quantities are calculated next from a kMC
 simulation.
 
+
 *Adapting the kMC code to simulate steady-state behaviors:*
 
 *(link to code:
@@ -169,7 +171,8 @@ The model developed in the previous guide (to simulate thermodynamic
 behaviors) includes a bath of reactant *A* and product *B*, initialized
 at zero time as follows:
 
-># initialize:
+>
+>#initialize:
 > 
 >N_A = 1000
 >
@@ -358,6 +361,7 @@ formation rates as a function of *y~A~* mole fractions from mean-field
 descriptions (MF) and time-averaged behaviours from kMC simulations
 (kMC).
 
+
 *Exercises:*
 
 1\. Compare rates obtained from different simulation times to see how
@@ -371,6 +375,7 @@ kMC simulation?
 3\. Adapt the code to consider a more complex reaction like
 A\<-\>A\*\<-\>B\*\<-\>C\*
 
+
 *References:*
 
 \[1\] Andersen M, Panosetti C, Reuter K. A Practical Guide to Surface
@@ -378,6 +383,7 @@ Kinetic Monte Carlo Simulations. Front Chem. 2019;7:202.
 
 \[2\] Reaction rate theory and rare events (Chapter 14). B Peters.
 Elsevier, 2017. ISBN: 978-0-444-56349-1
+
 
 *Appendix:*
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-20T08:38:22+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><em>Introduction:</em></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-20T08:41:49+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><em>Introduction:</em></p>
 
 <p>The previous guide
 (<a href="https://ari-fischer.github.io/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html">https://ari-fischer.github.io/site/kinetics/tutorials/2023/07/23/KMC_tutorial_1_equilibrium.html</a>)
@@ -162,7 +162,8 @@ behaviors) includes a bath of reactant <em>A</em> and product <em>B</em>, initia
 at zero time as follows:</p>
 
 <blockquote>
-  <h1 id="initialize">initialize:</h1>
+
+  <p>#initialize:</p>
 
   <p>N_A = 1000</p>
 
