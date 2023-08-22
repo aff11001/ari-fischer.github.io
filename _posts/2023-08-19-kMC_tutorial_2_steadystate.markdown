@@ -87,16 +87,16 @@ conservation of occupied and unoccupied *L*\* sites, given by:
 ![eq 4]({{ "/assets/images/KMC_tutorial_2/eqn4.png" | relative_url }})
 
 The coverage of *B*\* is assumed to be negligible at low conversion (low
-*y~B~*) because *B*\* desorbs faster than it adsorbs
-(*k<sub>-B</sub>*~/*k<sub>B</sub>*=10). An expression for $\theta_{*}$ can be obtained by
-neglecting the $\theta_{B}$ term, replacing $\theta_{A}$ with its value
-from equation 5, and solving for $\theta_{*}$:
+*y<sub>B</sub>*) because *B*\* desorbs faster than it adsorbs
+(*k<sub>-B</sub>*/*k<sub>B</sub>*=10). An expression for &theta;<sub>*</sub> can be obtained by
+neglecting the &theta;<sub>B</sub> term, replacing &theta;<sub>A</sub> with its value
+from equation 5, and solving for &theta;<sub>*</sub>:
 
 ![eq 5]({{ "/assets/images/KMC_tutorial_2/eqn5.png" | relative_url }})
 
-The net rate of *B* formation is obtained by replacing the $\theta_{*}$
+The net rate of *B* formation is obtained by replacing the &theta;<sub>*</sub>
 term in equation 5 with its value from equation 7, and then substituting
-the resulting expression for $\theta_{A}$ into equation 4:
+the resulting expression for &theta;<sub>A</sub> into equation 4:
 
 ![eq 6]({{ "/assets/images/KMC_tutorial_2/eqn6.png" | relative_url }})
 
@@ -309,11 +309,11 @@ rates: 0.0891111360522377
 *Comparing kMC simulation results to the mean-field kinetic
 description:*
 
-The rate of *B* formation for a *y~A~* value of unity was found to be
+The rate of *B* formation for a *y<sub>A</sub>* value of unity was found to be
 0.089 from the kMC simulation, which is similar to the pseudo-steady
 state value obtained from the mean-field equation in equation 8 (0.091).
-The trends for coverage and rates with changing *y~A~* values, but
-constant, zero *y~B~* values are obtained by initializing the simulation
+The trends for coverage and rates with changing *y<sub>A</sub>* values, but
+constant, zero *y<sub>B</sub>* values are obtained by initializing the simulation
 with different numbers of N_A, for a fixed total number of species in
 the reservoir, denoted as N_tot:
 
@@ -351,7 +351,7 @@ Langmuir-Hinshellwood kinetic expressions.
 ![figure 3]({{ "/assets/images/KMC_tutorial_2/figure3.png" | relative_url }})
 
 **Figure 3:** Coverage of *A*\* and vacant \*-sites (Left) and *B*
-formation rates as a function of *y~A~* mole fractions from mean-field
+formation rates as a function of *y<sub>A</sub>* mole fractions from mean-field
 descriptions (MF) and time-averaged behaviours from kMC simulations
 (kMC).
 

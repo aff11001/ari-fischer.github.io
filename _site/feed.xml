@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-21T21:06:46+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><img src="/site/assets/images/KMC_tutorial_2/TOC.png" alt="TOC" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-23T02:12:14+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><img src="/site/assets/images/KMC_tutorial_2/TOC.png" alt="TOC" /></p>
 
 <p><em>Introduction:</em></p>
 
@@ -76,16 +76,16 @@ conservation of occupied and unoccupied <em>L</em>* sites, given by:</p>
 <p><img src="/site/assets/images/KMC_tutorial_2/eqn4.png" alt="eq 4" /></p>
 
 <p>The coverage of <em>B</em>* is assumed to be negligible at low conversion (low
-<em>y~B~</em>) because <em>B</em>* desorbs faster than it adsorbs
-(<em>k<sub>-B</sub></em>~/<em>k<sub>B</sub></em>=10). An expression for $\theta_{<em>}$ can be obtained by
-neglecting the $\theta_{B}$ term, replacing $\theta_{A}$ with its value
-from equation 5, and solving for $\theta_{</em>}$:</p>
+<em>y<sub>B</sub></em>) because <em>B</em>* desorbs faster than it adsorbs
+(<em>k<sub>-B</sub></em>/<em>k<sub>B</sub></em>=10). An expression for θ<sub>*</sub> can be obtained by
+neglecting the θ<sub>B</sub> term, replacing θ<sub>A</sub> with its value
+from equation 5, and solving for θ<sub>*</sub>:</p>
 
 <p><img src="/site/assets/images/KMC_tutorial_2/eqn5.png" alt="eq 5" /></p>
 
-<p>The net rate of <em>B</em> formation is obtained by replacing the $\theta_{*}$
+<p>The net rate of <em>B</em> formation is obtained by replacing the θ<sub>*</sub>
 term in equation 5 with its value from equation 7, and then substituting
-the resulting expression for $\theta_{A}$ into equation 4:</p>
+the resulting expression for θ<sub>A</sub> into equation 4:</p>
 
 <p><img src="/site/assets/images/KMC_tutorial_2/eqn6.png" alt="eq 6" /></p>
 
@@ -309,11 +309,11 @@ as follows:</p>
 <p><em>Comparing kMC simulation results to the mean-field kinetic
 description:</em></p>
 
-<p>The rate of <em>B</em> formation for a <em>y~A~</em> value of unity was found to be
+<p>The rate of <em>B</em> formation for a <em>y<sub>A</sub></em> value of unity was found to be
 0.089 from the kMC simulation, which is similar to the pseudo-steady
 state value obtained from the mean-field equation in equation 8 (0.091).
-The trends for coverage and rates with changing <em>y~A~</em> values, but
-constant, zero <em>y~B~</em> values are obtained by initializing the simulation
+The trends for coverage and rates with changing <em>y<sub>A</sub></em> values, but
+constant, zero <em>y<sub>B</sub></em> values are obtained by initializing the simulation
 with different numbers of N_A, for a fixed total number of species in
 the reservoir, denoted as N_tot:</p>
 
@@ -355,7 +355,7 @@ Langmuir-Hinshellwood kinetic expressions.</p>
 <p><img src="/site/assets/images/KMC_tutorial_2/figure3.png" alt="figure 3" /></p>
 
 <p><strong>Figure 3:</strong> Coverage of <em>A</em>* and vacant *-sites (Left) and <em>B</em>
-formation rates as a function of <em>y~A~</em> mole fractions from mean-field
+formation rates as a function of <em>y<sub>A</sub></em> mole fractions from mean-field
 descriptions (MF) and time-averaged behaviours from kMC simulations
 (kMC).</p>
 
