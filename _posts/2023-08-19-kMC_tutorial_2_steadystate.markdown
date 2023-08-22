@@ -59,7 +59,7 @@ activities) \[2\]:
 ![eq 1]({{ "/assets/images/KMC_tutorial_2/eqn1.png" | relative_url }})
 
 Here, *y<sub>A</sub>* and *y<sub>B</sub>* are the mole fractions of *A* and *B*,
-respectively; $\theta_{A}$, $\theta_{B}$, and $\theta_{*}$ are the
+respectively; &theta;<sub>A</sub>, &theta;<sub>B</sub>, and &theta;<sub>*</sub> are the
 fractional surface coverages of *A*, *B* and vacancies on *L\** sites;
 and *k<sub>i</sub>* are rate constants with corresponding steps denoted in Scheme
 1.

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-23T02:14:12+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><img src="/site/assets/images/KMC_tutorial_2/TOC.png" alt="TOC" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-23T02:15:23+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><img src="/site/assets/images/KMC_tutorial_2/TOC.png" alt="TOC" /></p>
 
 <p><em>Introduction:</em></p>
 
@@ -48,10 +48,10 @@ activities) [2]:</p>
 <p><img src="/site/assets/images/KMC_tutorial_2/eqn1.png" alt="eq 1" /></p>
 
 <p>Here, <em>y<sub>A</sub></em> and <em>y<sub>B</sub></em> are the mole fractions of <em>A</em> and <em>B</em>,
-respectively; $\theta_{A}$, $\theta_{B}$, and $\theta_{<em>}$ are the
+respectively; θ<sub>A</sub>, θ<sub>B</sub>, and θ<sub><em>&lt;/sub&gt; are the
 fractional surface coverages of *A</em>, <em>B</em> and vacancies on <em>L*</em> sites;
 and <em>k<sub>i</sub></em> are rate constants with corresponding steps denoted in Scheme
-1.</p>
+1.</sub></p>
 
 <p>An analytical expression for the rate of <em>B</em> formation can be derived
 based on the following assumptions consistent with the values of rate
