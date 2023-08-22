@@ -256,7 +256,7 @@ quasi-equilibrium is obtained as follows:
 
 ![Eq 1]({{ "/assets/images/KMC_tutorial_1/Eq1.png" | relative_url }})
 
-Here, the $\theta$ terms denote fractional surface coverages of A, B, or empty (\*) sites. Solving this set of algebraic equations for the *y<sub>B</sub>* / *y<sub>A</sub>* ratio
+Here, the &theta; terms denote fractional surface coverages of A, B, or empty (\*) sites. Solving this set of algebraic equations for the *y<sub>B</sub>* / *y<sub>A</sub>* ratio
 gives a definition of *K<sub>AB</sub>* in terms of the forward and reverse rate
 constants in Scheme 1:
 

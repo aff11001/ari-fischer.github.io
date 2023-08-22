@@ -67,14 +67,14 @@ and *k<sub>i</sub>* are rate constants with corresponding steps denoted in Schem
 An analytical expression for the rate of *B* formation can be derived
 based on the following assumptions consistent with the values of rate
 constants in Table 1. First, *B*\* desorbs much faster than it reacts at
-the surface to re-form *A*\* (*k<sub>-B</sub>*~/*k<sub>BA</sub>*=100000), indicating that
+the surface to re-form *A*\* (*k<sub>-B</sub>*/*k<sub>BA</sub>*=100000), indicating that
 *B*\* formation in Step 2 is irreversible. The rate of Step 2 can
 therefore be restated as:
 
 ![eq 2]({{ "/assets/images/KMC_tutorial_2/eqn2.png" | relative_url }})
 
 Secondly, *A*\* desorbs much faster than it reacts to form *B*\*
-(*k<sub>-A</sub>*~/*k<sub>AB</sub>*=100) indicating that Step 1 occurs at quasi-equilibrium
+(*k<sub>-A</sub>*/*k<sub>AB</sub>*=100) indicating that Step 1 occurs at quasi-equilibrium
 (i.e. the forward and reverse rates of Step 1 are both much larger than
 the net rate of reaction). Approximating the net rate of Step 1 as zero
 gives the quasi-equilibrium coverage of *A*\*:

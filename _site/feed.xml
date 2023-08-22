@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-23T02:12:14+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><img src="/site/assets/images/KMC_tutorial_2/TOC.png" alt="TOC" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-23T02:14:12+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><img src="/site/assets/images/KMC_tutorial_2/TOC.png" alt="TOC" /></p>
 
 <p><em>Introduction:</em></p>
 
@@ -56,14 +56,14 @@ and <em>k<sub>i</sub></em> are rate constants with corresponding steps denoted i
 <p>An analytical expression for the rate of <em>B</em> formation can be derived
 based on the following assumptions consistent with the values of rate
 constants in Table 1. First, <em>B</em>* desorbs much faster than it reacts at
-the surface to re-form <em>A</em>* (<em>k<sub>-B</sub></em>~/<em>k<sub>BA</sub></em>=100000), indicating that
+the surface to re-form <em>A</em>* (<em>k<sub>-B</sub></em>/<em>k<sub>BA</sub></em>=100000), indicating that
 <em>B</em>* formation in Step 2 is irreversible. The rate of Step 2 can
 therefore be restated as:</p>
 
 <p><img src="/site/assets/images/KMC_tutorial_2/eqn2.png" alt="eq 2" /></p>
 
 <p>Secondly, <em>A</em>* desorbs much faster than it reacts to form <em>B</em>*
-(<em>k<sub>-A</sub></em>~/<em>k<sub>AB</sub></em>=100) indicating that Step 1 occurs at quasi-equilibrium
+(<em>k<sub>-A</sub></em>/<em>k<sub>AB</sub></em>=100) indicating that Step 1 occurs at quasi-equilibrium
 (i.e. the forward and reverse rates of Step 1 are both much larger than
 the net rate of reaction). Approximating the net rate of Step 1 as zero
 gives the quasi-equilibrium coverage of <em>A</em>*:</p>
@@ -670,7 +670,7 @@ quasi-equilibrium is obtained as follows:</p>
 
 <p><img src="/site/assets/images/KMC_tutorial_1/Eq1.png" alt="Eq 1" /></p>
 
-<p>Here, the $\theta$ terms denote fractional surface coverages of A, B, or empty (*) sites. Solving this set of algebraic equations for the <em>y<sub>B</sub></em> / <em>y<sub>A</sub></em> ratio
+<p>Here, the θ terms denote fractional surface coverages of A, B, or empty (*) sites. Solving this set of algebraic equations for the <em>y<sub>B</sub></em> / <em>y<sub>A</sub></em> ratio
 gives a definition of <em>K<sub>AB</sub></em> in terms of the forward and reverse rate
 constants in Scheme 1:</p>
 
