@@ -210,7 +210,7 @@ fixing the mole fractions of *A* and *B* in the reservoir so that the
 probabilities for *A* and *B* adsorption do not change with the
 simulation time. This is achieved by simply commenting out the "N_A +=
 -1" line from the previous simulation so that the *A*-adsorption step
-does not affect the amount of *A* in the reservoir. The same is down for
+does not affect the amount of *A* in the reservoir. The same is done for
 the *B*-desorption step ("N_B += 1"). We still, however, want to keep
 track of the number of products formed during a simulation, so the we
 define a number of products formed "N_P" initialized as:
@@ -313,7 +313,7 @@ The rate of *B* formation for a *y<sub>A</sub>* value of unity was found to be
 0.089 from the kMC simulation, which is similar to the pseudo-steady
 state value obtained from the mean-field equation in equation 8 (0.091).
 The trends for coverage and rates with changing *y<sub>A</sub>* values, but
-constant, zero *y<sub>B</sub>* values are obtained by initializing the simulation
+constant (zero) *y<sub>B</sub>* values, are obtained by initializing the simulation
 with different numbers of N_A, for a fixed total number of species in
 the reservoir, denoted as N_tot:
 

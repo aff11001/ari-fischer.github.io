@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-23T02:15:23+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><img src="/site/assets/images/KMC_tutorial_2/TOC.png" alt="TOC" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/site/" rel="alternate" type="text/html" /><updated>2023-08-24T01:56:32+08:00</updated><id>http://localhost:4000/site/feed.xml</id><title type="html">Ari Fischer</title><subtitle>Researching chemistry-based solutions to the problems surrounding energy and sustainable materials production that define our times!</subtitle><entry><title type="html">Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions.</title><link href="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html" rel="alternate" type="text/html" title="Steady-state kinetics with kinetic Monte Carlo in Python and the connection to mean field kinetic descriptions." /><published>2023-08-19T00:00:00+08:00</published><updated>2023-08-19T00:00:00+08:00</updated><id>http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate</id><content type="html" xml:base="http://localhost:4000/site/kinetics/tutorials/2023/08/19/kMC_tutorial_2_steadystate.html"><![CDATA[<p><img src="/site/assets/images/KMC_tutorial_2/TOC.png" alt="TOC" /></p>
 
 <p><em>Introduction:</em></p>
 
@@ -202,7 +202,7 @@ fixing the mole fractions of <em>A</em> and <em>B</em> in the reservoir so that 
 probabilities for <em>A</em> and <em>B</em> adsorption do not change with the
 simulation time. This is achieved by simply commenting out the “N_A +=
 -1” line from the previous simulation so that the <em>A</em>-adsorption step
-does not affect the amount of <em>A</em> in the reservoir. The same is down for
+does not affect the amount of <em>A</em> in the reservoir. The same is done for
 the <em>B</em>-desorption step (“N_B += 1”). We still, however, want to keep
 track of the number of products formed during a simulation, so the we
 define a number of products formed “N_P” initialized as:</p>
@@ -313,7 +313,7 @@ description:</em></p>
 0.089 from the kMC simulation, which is similar to the pseudo-steady
 state value obtained from the mean-field equation in equation 8 (0.091).
 The trends for coverage and rates with changing <em>y<sub>A</sub></em> values, but
-constant, zero <em>y<sub>B</sub></em> values are obtained by initializing the simulation
+constant (zero) <em>y<sub>B</sub></em> values, are obtained by initializing the simulation
 with different numbers of N_A, for a fixed total number of species in
 the reservoir, denoted as N_tot:</p>
 
