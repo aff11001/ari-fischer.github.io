@@ -89,8 +89,7 @@ Scheme 1) and hydrogen oxalate (11; Scheme 1).
 
 **Scheme 1:** A sequence of elementary steps for the formation of oxalic
 acid (7) and hydrogen oxalate (11) from glyoxal (1) in aqueous solution
-in the presence of OH radicals and O<sub>2</sub> adapted from \[1,2\]. The figure
-was constructed using MarvinSketch (<https://chemaxon.com/marvin>)
+in the presence of OH radicals and O<sub>2</sub> adapted from \[1,2\].
 
 To build our melody, we first need to determine the energy associated
 with each intermediate in the mechanism. Density functional theory (DFT
