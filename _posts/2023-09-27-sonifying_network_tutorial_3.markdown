@@ -176,7 +176,7 @@ The accompanying code can be found on github: <https://github.com/ari-fischer/ki
 \[2\] Y. B. Lim et al., Atmos. Chem. Phys., 10, 10521--10539, 2010
 
 *Image credits:* piano
-keys-[en.wikipedia.org/wiki/Musical_key...aviatur-3-en.svg](https://gate.sc?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMusical_keyboard%23%2Fmedia%2FFile%3AKlaviatur-3-en.svg&token=29d3e8-1-1695816917603),
+keys- <https://en.wikipedia.org/wiki/Musical_keyboard>,
 molecular structures-drawn using MarvinSketch
 (<https://chemaxon.com/marvin>)
 
