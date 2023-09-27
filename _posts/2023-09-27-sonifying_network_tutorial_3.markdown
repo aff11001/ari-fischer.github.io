@@ -9,10 +9,6 @@ link_photo: ({{ "/assets/images/KMC_tutorial_2/TOC.png" | relative_url }})
 
 ![TOC]({{ "/assets/images/tutorial_3_sonifying_reaction_network/TOC.png" | relative_url }})
 
-*Image credits:* piano
-keys-[en.wikipedia.org/wiki/Musical_key...aviatur-3-en.svg](https://gate.sc?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMusical_keyboard%23%2Fmedia%2FFile%3AKlaviatur-3-en.svg&token=29d3e8-1-1695816917603),
-molecular structures-drawn using MarvinSketch
-(<https://chemaxon.com/marvin>)
 
 *Introduction:*
 
@@ -178,6 +174,11 @@ the base of a chord that was played as an arpeggio
 \[1\] Y. Tan et al., Environ. Sci. Technol. 2009, 43, 8105--8112
 
 \[2\] Y. B. Lim et al., Atmos. Chem. Phys., 10, 10521--10539, 2010
+
+*Image credits:* piano
+keys-[en.wikipedia.org/wiki/Musical_key...aviatur-3-en.svg](https://gate.sc?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMusical_keyboard%23%2Fmedia%2FFile%3AKlaviatur-3-en.svg&token=29d3e8-1-1695816917603),
+molecular structures-drawn using MarvinSketch
+(<https://chemaxon.com/marvin>)
 
 [Appendix]{.underline}
 
