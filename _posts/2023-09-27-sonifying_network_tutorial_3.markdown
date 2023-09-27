@@ -180,6 +180,6 @@ keys- <https://en.wikipedia.org/wiki/Musical_keyboard>,
 molecular structures-drawn using MarvinSketch
 (<https://chemaxon.com/marvin>)
 
-*Appendix]*:
+*Appendix*:
 
 ![Table A1]({{ "/assets/images/tutorial_3_sonifying_reaction_network/TableA1.png" | relative_url }})
