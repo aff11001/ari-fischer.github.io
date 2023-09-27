@@ -10,7 +10,7 @@ link_photo: ({{ "/assets/images/KMC_tutorial_2/TOC.png" | relative_url }})
 ![TOC]({{ "/assets/images/tutorial_3_sonifying_reaction_network/TOC.png" | relative_url }})
 
 *Image credits:* piano
-keys-[en.wikipedia.org/wiki/Musical_key...aviatur-3-en.svg](https://gate.sc?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMusical_keyboard%23%2Fmedia%2FFile%3AKlaviatur-3-en.svg&token=29d3e8-1-1695816917603)),
+keys-[en.wikipedia.org/wiki/Musical_key...aviatur-3-en.svg](https://gate.sc?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMusical_keyboard%23%2Fmedia%2FFile%3AKlaviatur-3-en.svg&token=29d3e8-1-1695816917603),
 molecular structures-drawn using MarvinSketch
 (<https://chemaxon.com/marvin>)
 
