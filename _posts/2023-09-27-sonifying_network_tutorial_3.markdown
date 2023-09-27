@@ -165,11 +165,11 @@ the arpeggiator means that each note from the trajectory file defined
 the base of a chord that was played as an arpeggio
 (<https://en.wikipedia.org/wiki/Arpeggio>).
 
-[Sample Code]{.underline}
+*Sample Code*:
 
 The accompanying code can be found on github: <https://github.com/ari-fischer/kinetics_tutorial/tree/main>
 
-[References]{.underline}
+*References*:
 
 \[1\] Y. Tan et al., Environ. Sci. Technol. 2009, 43, 8105--8112
 
@@ -180,6 +180,6 @@ keys-[en.wikipedia.org/wiki/Musical_key...aviatur-3-en.svg](https://gate.sc?url=
 molecular structures-drawn using MarvinSketch
 (<https://chemaxon.com/marvin>)
 
-[Appendix]{.underline}
+*Appendix]*:
 
 ![Table A1]({{ "/assets/images/tutorial_3_sonifying_reaction_network/TableA1.png" | relative_url }})
