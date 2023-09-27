@@ -20,10 +20,10 @@ Scheme 1). Trajectories through reaction networks can be constructed
 using kinetic Monte Carlo (see previous tutorials on
 <https://ari-fischer.github.io/site/>). These trajectories are
 represented as a list of indices corresponding to different states (i.e.
-species) that the simulated system exists, along with a waiting duration
+species) that the simulated system exists, along with a duration
 of time that the system exists in one state before transitioning to the
 next one. Such trajectories are reminiscent of a musical melody, which
-consists of a list of notes with a complementary duration that the note
+consists of a list of notes with a corresponding duration that the note
 is played in sequence.
 
 To complete the analogy between a reaction trajectory and melody
@@ -59,7 +59,7 @@ With the energy mapping to musical notes in hand, a sequence of states
 corresponding to species in the network with durations from a kMC
 trajectory can be represented as a musical melody. In what follows, an
 example implementation of the above algorithm combined with a kMC
-simulation is shown (in Python) to sonify an example reaction network.
+simulation is described (in Python; code provided) to sonify an example reaction network.
 The result is a melody represented as a MIDI file, which can be imported
 into a composition software like GarageBand on Mac to play using a vast
 library of programed instruments.
@@ -123,10 +123,7 @@ appendix.
 A kMC simulation is run to get the trajectory as a sequence of states
 that the system occupies. Rate constants for the transition from each
 state to another are taken from Lim et al. \[2\] and shown in Table
-A1.The accompanying code can be found on github
-(<https://github.com/ari-fischer/kinetics_tutorial/tree/main>) and a
-guide to kMC simulations can be found in earlier blog posts at
-https://ari-fischer.github.io/site/. The effective rate constants for
+A1. The effective rate constants for
 the steps are re-scaled from a range between 1e-10 and 260 to between
 0.8 and 1.2, and the waiting times after simulation are then re-scaled
 to fall within a range of 0.5 and 2 quarter notes. These scaling
@@ -167,6 +164,10 @@ built-in synthesizer, along with an automated drum-beat machine. Using
 the arpeggiator means that each note from the trajectory file defined
 the base of a chord that was played as an arpeggio
 (<https://en.wikipedia.org/wiki/Arpeggio>).
+
+[Sample Code]{.underline}
+
+The accompanying code can be found on github: <https://github.com/ari-fischer/kinetics_tutorial/tree/main>
 
 [References]{.underline}
 
