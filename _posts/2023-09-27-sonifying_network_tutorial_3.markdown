@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sonifying a chemical reaction network to generate a musical
+title:  "Sonifying a chemical reaction network as a musical
 composition with kinetic Monte Carlo."
 date:   2023-09-27 00:00:00 +0800
 categories: Kinetics tutorials
