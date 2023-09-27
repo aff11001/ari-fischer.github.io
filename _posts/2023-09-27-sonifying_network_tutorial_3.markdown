@@ -43,15 +43,15 @@ Energies of each state in a reaction network (reactants, products, and
 intermediates) can be assigned a musical note using the following
 algorithm:
 
-1.  Find the highest and lowest energy (E~H~ and E~L~, respectively) of
+1.  Find the highest and lowest energy (E<sub>H</sub> and E<sub>L</sub>, respectively) of
     species in the reaction network.
 
 2.  Choose a musical key for the melody (e.g. C-major) and the number of
     notes (n) to include in the melody.
 
-3.  Divide the number energy span (E = E~H~- E~L~) into n evenly spaced
+3.  Divide the number energy span (E = E<sub>H</sub>- E<sub>L</sub>) into n evenly spaced
     energy bins. The lower and upper limits for each I of n bins are
-    given by i\*E/n+E~L~ and i\*E/n+E~H~, respectively.
+    given by i\*E/n+E<sub>L</sub> and i\*E/n+E<sub>H</sub>, respectively.
 
 4.  Assign bins to notes in the selected key in descending order (i.e.
     higher energies mean lower notes).
@@ -85,7 +85,7 @@ Scheme 1 shows an attenuated model for the reaction of glyoxal in
 aqueous solutions (e.g. in clouds) adapted from previous studies by Tan
 et al. \[1\] and Lim et al. \[2\]. There are a total of 11 possible
 intermediates in the mechanism. They are interconverted in a sequence of
-steps that are mediated by OH radicals and O~2~. These reactions drive
+steps that are mediated by OH radicals and O<sub>2</sub>. These reactions drive
 the consumption of glyoxal and the ultimate formation of oxalic acid (7;
 Scheme 1) and hydrogen oxalate (11; Scheme 1).
 
@@ -93,7 +93,7 @@ Scheme 1) and hydrogen oxalate (11; Scheme 1).
 
 **Scheme 1:** A sequence of elementary steps for the formation of oxalic
 acid (7) and hydrogen oxalate (11) from glyoxal (1) in aqueous solution
-in the presence of OH radicals and O~2~ adapted from \[1,2\]. The figure
+in the presence of OH radicals and O<sub>2</sub> adapted from \[1,2\]. The figure
 was constructed using MarvinSketch (<https://chemaxon.com/marvin>)
 
 To build our melody, we first need to determine the energy associated
