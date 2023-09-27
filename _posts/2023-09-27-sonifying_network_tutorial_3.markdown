@@ -7,6 +7,8 @@ categories: Kinetics tutorials
 link_photo: ({{ "/assets/images/KMC_tutorial_2/TOC.png" | relative_url }})
 ---
 
+![TOC]({{ "/assets/images/tutorial_3_sonifying_reaction_network/TOC.png" | relative_url }})
+
 *Image credits:* piano
 keys-[en.wikipedia.org/wiki/Musical_key...aviatur-3-en.svg](https://gate.sc?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMusical_keyboard%23%2Fmedia%2FFile%3AKlaviatur-3-en.svg&token=29d3e8-1-1695816917603)),
 molecular structures-drawn using MarvinSketch
@@ -87,8 +89,7 @@ steps that are mediated by OH radicals and O~2~. These reactions drive
 the consumption of glyoxal and the ultimate formation of oxalic acid (7;
 Scheme 1) and hydrogen oxalate (11; Scheme 1).
 
-![](media/image2.png){width="5.080294181977253in"
-height="4.752152230971129in"}
+![Scheme 1]({{ "/assets/images/tutorial_3_sonifying_reaction_network/Scheme1.png" | relative_url }})
 
 **Scheme 1:** A sequence of elementary steps for the formation of oxalic
 acid (7) and hydrogen oxalate (11) from glyoxal (1) in aqueous solution
@@ -115,37 +116,7 @@ one may start with D3 at state 1, and then assign one higher pitch to
 each subsequent step. In this case, State 1 would be D3, state 2 E3,
 state 3 F#3, etc.
 
-  -----------------------------------------------------------------------
-  Table 1: Notes                                  
-  assigned to each                                
-  chemical intermediate                           
-  --------------------- ------------------------- -----------------------
-  State                 Component                 Note
-
-  1                     glyoxal                   D3
-
-  2                     Glyoxal radical           F#3
-
-  3                     Glyoxal-peroxy radical    C#4
-
-  4                     Glyoxylic acid            C#4
-
-  5                     Glyoxylic acid radical    G4
-
-  6                     Glyoxylic acid peroxyl    B4
-                        radical                   
-
-  7                     Oxalic                    B4
-
-  8                     Glyoxylate                C#4
-
-  9                     Glyoxylate radical        F#4
-
-  10                    Glyoxylate peroxyl        C#5
-                        radical                   
-
-  11                    Hydrogen oxalate          C#5
-  -----------------------------------------------------------------------
+![Table 1]({{ "/assets/images/tutorial_3_sonifying_reaction_network/Table1.png" | relative_url }})
 
 The melody can now by generated from a kMC trajectory using the mapping
 from states to notes. The kMC simulation requires not only the list of
@@ -210,34 +181,4 @@ the base of a chord that was played as an arpeggio
 
 [Appendix]{.underline}
 
-  -----------------------------------------------------------------------
-  **Table A1**: Rate                              
-  constants for each                              
-  reaction in Scheme 1                            
-  (from Lim et al. \[2\])                         
-  ----------------------- ----------------------- -----------------------
-  R                       k (M^n-1^ s^-1^)^a^     Co-reactant
-
-  1→2                     1.1e9                   \[OH\]
-
-  2→3                     1.0e6                   \[O~2~\]
-
-  3→4                     50                      \-
-
-  4→5                     3.62e8                  \[OH\]
-
-  5→6                     1.0e6                   \[O~2~\]
-
-  6→7                     50                      \-
-
-  4→9                     2.9e9                   \[OH\]
-
-  9→10                    1.0e6                   \[O~2~\]
-
-  10→11                   10                      
-
-  ^a^n = 1 for                                    
-  unimolecular reaction                           
-  and 2 for bimolecular                           
-  reaction                                        
-  -----------------------------------------------------------------------
+![Table A1]({{ "/assets/images/tutorial_3_sonifying_reaction_network/TableA1.png" | relative_url }})
