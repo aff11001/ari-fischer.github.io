@@ -1,11 +1,9 @@
 ---
 layout: post
 title:  "AIChE Presentation Schedule 2023"
-date:   2023-11-05 00:00:00 +0800
-categories: Announcements
-link_photo: ({{ "/assets/images/KMC_tutorial_2/TOC.png" | relative_url }})
+date:   2023-11-04 00:00:00 +0800
+categories: Kinetics tutorials
 ---
-
 Ari Fischer Presentation Schedule AIChE 2023 Orlando
 
 *2eo - Advancing Sustainable Chemistry through Experimental and Computational Approaches to Multi-Phase Chemical Reaction Processes*
