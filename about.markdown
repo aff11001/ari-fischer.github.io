@@ -13,6 +13,7 @@ I am currently a research fellow at Nanyang Technological University in Singapor
 You can learn more about my work in the following journal articles:
 
 Pre-print and submitted
+
 1.	Fischer, A. F. “Toluene Hydrogenation Catalyzed by Pt Nanoparticles: Kinetically Relevant Steps, Binding Ensembles, and Temperature Effects on Turnover Rates.” ACS Catalysis, under review (2024). ChemRxiv: https://doi.org/10.26434/chemrxiv-2024-13dc5 
 
 
@@ -21,6 +22,7 @@ Pre-print and submitted
 
 
 Accepted and in print
+
 3.	Xie, Z.; Mahendran, V.; Jonnalagadda, U. S.; Fan, Q.; Su, X; Fischer, A. F.; Tan, M.; Tao, L.; Jerome, F.; Valange, S.; Kwan, J.; Choksi, T. S.; Amaniampong, P. N.;  Liu W., “Boosting Energy Efficiency and Selectivity of Glucose Oxidation to Glucuronic Acid in High Frequency Ultrasound Using Multicavity CuO Catalytic Cavitation Agents,” Green Chemistry, accepted (2024). 
 
 
