@@ -4,27 +4,27 @@ title:  "AIChE Presentation Schedule 2024"
 date:   2024-10-27 00:00:00 +0800
 categories: Kinetics tutorials
 ---
-Ari Fischer Presentation Schedule AIChE 2023 Orlando
+Ari Fischer Presentation Schedule AIChE 2024 San Diego
 
-*2eo - Advancing Sustainable Chemistry through Experimental and Computational Approaches to Multi-Phase Chemical Reaction Processes* <br />
-Sunday, November 5, 2023 <br />
+*Catalyst Discovery and Reaction Engineering by Coupling Chemical Reactions across Phase Boundaries* <br />
+Sunday, October 27, 2024 <br />
 1:00 PM - 3:00 PM <br />
-Regency Ballroom R/S (Convention Level, Hyatt Regency Orlando) <br />
+Exhibit Hall GH (Ground Level, San Diego Convention Center) <br />
 <br />
 
-*700g -The Mechanism of Ultrasound-Driven OH-Mediated Aqueous Benzyl Alcohol Oxidation with Analogies to Atmospheric Chemistry.* <br />
-Monday, November 6, 2023 <br />
-2:18 PM - 2:36 PM <br />
-Plaza International Ballroom E (Convention Level, Hyatt Regency Orlando) <br />
+*6g—The Mechanisms of •OH-Driven Aromatic Ring Fragmentation Using Ultrasound and Opportunities for Selective Formation of Dialdehydes* <br />
+Sunday, October 27, 2024 <br />
+5:18 PM - 5:36 PM <br />
+Room 28B (Upper Level, San Diego Convention Center)<br />
 <br />
 
-*677d - Catalytic Hydrogenation of Arenes on Densely-Covered Pt Nanoparticles: Kinetically-Relevant Steps and Unusual Temperature Effects on Turnover Rates* <br />
-Thursday, November 9, 2023 <br />
-8:54 AM - 9:12 AM <br />
-Plaza International Ballroom D (Convention Level, Hyatt Regency Orlando) <br />
+*246f - Beyond “Hydrogen Spillover”: The Mechanistic Origins of Bifunctional Synergies between Pt and Non-Reducible Oxide Co-Catalysts for Arene Hydrogenation* <br />
+Tuesday, October 29, 2024 <br />
+9:30 AM - 9:48 AM <br />
+Room 28D (Upper Level, San Diego Convention Center)<br />
 <br />
 
-*680f - The Effects of Solvent Properties on Radical Formation from Ultrasound-Driven Inertial Cavitation for Sono-Chemical Process Intensification.* <br />
-Thursday, November 9, 2023 <br />
-9:40 AM - 10:00 AM <br />
-Plaza International Ballroom E (Convention Level, Hyatt Regency Orlando) <br />
+*708e - Selective Oxidation of Aldehyde Functions of Aqueous Organic Molecules Under Nominally Ambient Temperature Using Ultrasound Irradiation* <br />
+Thursday, October 31, 2024 <br />
+4:42 AM - 5;00 AM <br />
+Room 28C (Upper Level, San Diego Convention Center)<br />
