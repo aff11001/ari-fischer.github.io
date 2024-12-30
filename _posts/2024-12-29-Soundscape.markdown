@@ -1,12 +1,9 @@
 ---
 layout: post
-title:  "Data Sonification"
+title:  "Data sonification: Algorithmically generating soundscapes from 3D datasets"
 date:   2024-12-29 00:00:00 +0800
 categories: Kinetics tutorials
 ---
-
-**Data sonification: Algorithmically generating soundscapes from 3D datasets**
-
 **Introduction**
 
 The Chandra X-ray Observatory \[1\] introduced me to data sonification: the translation of data into sound. Their team of astronomers produced ethereal soundscapes from astronomical data that engage one’s sense of hearing, complementing the more familiar visual representations of our galaxy.\[1\] This auditory perspective makes complex data accessible to the blind and low-vision community,\[2\] and more broadly evokes the feelings of wonder music so naturally brings.
